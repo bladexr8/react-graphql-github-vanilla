@@ -17,6 +17,24 @@ class App extends Component {
     return (
       <div>
         <h1>{TITLE}</h1>
+
+        <form onSubmit={this.onSubmit}>
+          <label htmlFor="url">
+            Show open issues for https://github.com/
+          </label>
+          <input
+            id="url"
+            type="text"
+            onChange={this.onChange}
+            style={{ width: '300px' }}
+          />
+          <button type="submit">Search</button>
+        </form>
+
+        <hr />
+
+        {/* Here comes the result... */}
+
       </div>
     );
   }
